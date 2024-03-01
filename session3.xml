@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Students [
+    <!ELEMENT Students (student)>
+    <!ELEMENT student (name, course, subject*)>
+
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT course (#PCDATA)>
+    <!ELEMENT subject (#PCDATA)>
+
+    <!-- DEFAULT attribute value -->
+    <!-- <!ATTLIST subject book CDATA "1"> -->
+
+    <!-- REQUIRED attribute value -->
+    <!-- <!ATTLIST subject book CDATA #REQUIRED> -->
+
+    <!-- IMPLIED attribute value -->
+    <!-- <!ATTLIST subject book CDATA #IMPLIED> -->
+
+    <!-- FIXED attribute value -->
+    <!-- <!ATTLIST subject book CDATA #FIXED "1"> -->
+
+    <!-- ENUMERATED attributes  -->
+    <!ATTLIST subject book  (1|2|3) "3">
+]>
+
+
+<Students>
+    <student>
+        <name>abc</name>
+        <course>ADSE</course>
+        <subject book="1">MongoDB</subject>
+        <subject book="2">React.js</subject>
+        <subject book="3">Node.js</subject>
+    </student>
+
+</Students>
